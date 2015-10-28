@@ -1,0 +1,30 @@
+  <p id="notice" style ="color:red"><%= notice %></p>
+
+  <h1> Categories</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Product Categories</th>
+        
+      </tr>
+    </thead>
+
+
+  <tbody>
+      <% @categories.each do |category| %>
+        <tr>
+         <!--  <td><%= category.name %></td> -->
+          <td><%= link_to category.name, category %></td>
+          
+        </tr>
+      <% end %>
+    </tbody>
+  </table>  
+
+  <br>
+  <div>
+    <p>Import CSV file: </p>
+  <%= button_to "Trigger Import", import_categories_path, :class => "button", :method => :post  %>
+  </div>
+  

@@ -20,6 +20,9 @@ gem 'jquery-rails'
 gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
+gem 'mini_portile', '~> 0.6.2'
+gem 'nokogiri', '~> 1.3', '>= 1.3.3'
+gem 'kaminari'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
@@ -33,15 +36,14 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
-  gem 'rspec-rails'
-  gem 'factory_girl_rails'
+ gem 'rspec-rails', '~> 2.14', '>= 2.14.2'
+
 end
 
 group :test do
-  gem 'faker'
+ 
   gem 'capybara'
-  gem 'guard-rspec'
-  gem 'launchy'
+
 end
 
 group :development do

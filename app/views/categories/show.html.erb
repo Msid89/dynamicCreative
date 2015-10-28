@@ -1,0 +1,24 @@
+ <p id="notice"><%= notice %></p>
+ 
+  <h1><%= @category_name %></h1>
+  <%= paginate @category_products %>
+
+  <table>
+    <thead>
+      <tr>
+        <th colspan="2">List of Products</th>
+        
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @category_products.each do |product| %>
+        <tr>
+          <td><%= link_to product.product_name, product %></td>
+          <td><%= link_to 'Remove item', product_path(product.id), method: :delete %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+

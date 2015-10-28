@@ -1,14 +1,29 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Challenge</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
 
-<%= yield %>
+	<head>
+	  <title>Dynamic Creative</title>
+	  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	  <%= csrf_meta_tags %>
+	</head>
 
-</body>
+	<body>
+		<div body style="background-color:#194719">
+			<h2 style= "text-align: center; color:white; font-family:Georgia">Dynamic Creative Challenge</h2>
+		</div>
+		<div>
+      		<%= link_to 'Home', root_path %>
+  		</div>
+		
+		<div body style="background-color: color:lightgrey">
+			<%= yield %>
+		</div>
+		<br><br><br>
+		<div>
+			<p style= "text-align: center; font-family:Georgia">Created by: Mohammad Yasir Siddiqui</p>
+		</div>
+		
+	</body>
+
 </html>

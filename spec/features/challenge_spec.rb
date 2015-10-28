@@ -1,3 +1,4 @@
+ require "spec_helper"
 
 feature 'Perform an import and view the results' do
   background do
